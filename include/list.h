@@ -2,9 +2,7 @@
 #define LIST_INCLUDED__
 
 #ifdef __cplusplus
-#if __cplusplus
 extern "C" {
-#endif
 #endif
 
 #ifdef __cplusplus
@@ -30,9 +28,7 @@ extern void **List_toArray(T list, void *end);
 #undef T
 
 #ifdef __cplusplus
-#if __cplusplus
 }
-#endif
 #endif
 
 #endif /* LIST_INCLUDED__ */

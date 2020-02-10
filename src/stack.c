@@ -1,14 +1,12 @@
 #include "stack.h"
 
+#include <assert.h>
 #include <stddef.h>
 
-#include "assert.h"
 #include "mem.h"
 
 #ifdef __cplusplus
-#if __cplusplus
 extern "C" {
-#endif
 #endif
 
 #define T Stack_T
@@ -72,7 +70,5 @@ void Stack_free(T *stk)
 }
 
 #ifdef __cplusplus
-#if __cplusplus
 }
-#endif
 #endif

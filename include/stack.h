@@ -2,9 +2,7 @@
 #define STACK_INCLUDED__
 
 #ifdef __cplusplus
-#if __cplusplus
 extern "C" {
-#endif
 #endif
 
 #ifdef __cplusplus
@@ -22,9 +20,7 @@ extern void  Stack_free (T *stk);
 #undef T
 
 #ifdef __cplusplus
-#if __cplusplus
 }
-#endif
 #endif
 
 #endif /* STACK_INCLUDED__ */

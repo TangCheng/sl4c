@@ -5,27 +5,33 @@
 class ArithTests : public testing::Test
 {
 public:
-    void FunctionMaxTest(int integer1, int integer2, int expectation) {
+    void FunctionMaxTest(int integer1, int integer2, int expectation)
+    {
         int actual = Arith_max(integer1, integer2);
         EXPECT_EQ(actual, expectation);
     }
-    void FunctionMinTest(int integer1, int integer2, int expectation) {
+    void FunctionMinTest(int integer1, int integer2, int expectation)
+    {
         int actual = Arith_min(integer1, integer2);
         EXPECT_EQ(actual, expectation);
     }
-    void FunctionDivTest(int integer1, int integer2, int expectation) {
+    void FunctionDivTest(int integer1, int integer2, int expectation)
+    {
         int actual = Arith_div(integer1, integer2);
         EXPECT_EQ(actual, expectation);
     }
-    void FunctionModTest(int integer1, int integer2, int expectation) {
+    void FunctionModTest(int integer1, int integer2, int expectation)
+    {
         int actual = Arith_mod(integer1, integer2);
         EXPECT_EQ(actual, expectation);
     }
-    void FunctionFloorTest(int integer1, int integer2, int expectation) {
+    void FunctionFloorTest(int integer1, int integer2, int expectation)
+    {
         int actual = Arith_floor(integer1, integer2);
         EXPECT_EQ(actual, expectation);
     }
-    void FunctionCeilingTest(int integer1, int integer2, int expectation) {
+    void FunctionCeilingTest(int integer1, int integer2, int expectation)
+    {
         int actual = Arith_ceiling(integer1, integer2);
         EXPECT_EQ(actual, expectation);
     }

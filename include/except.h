@@ -4,9 +4,7 @@
 #include <setjmp.h>
 
 #ifdef __cplusplus
-#if __cplusplus
 extern "C" {
-#endif
 #endif
 
 #define T Except_T
@@ -91,9 +89,7 @@ void Except_raise(const T *e, const char *file, int line);
 #undef T
 
 #ifdef __cplusplus
-#if __cplusplus
 }
-#endif
 #endif
 
 #endif /* EXCEPT_H__ */

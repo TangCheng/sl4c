@@ -1,7 +1,12 @@
 #include "except.h"
+
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "assert.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #define T Except_T
 
@@ -9,13 +14,7 @@
 __declspec(thread)
 #endif
 
-#ifdef __cplusplus
-#if __cplusplus
-extern "C" {
-#endif
-#endif
-
-Except_Frame *Except_stack = NULL;
+    Except_Frame *Except_stack = NULL;
 
 void Except_raise(const T *e, const char *file, int line)
 {
@@ -25,12 +24,12 @@ void Except_raise(const T *e, const char *file, int line)
         fprintf(stderr, "Uncaught exception");
         if (e->reason) {
             fprintf(stderr, " %s", e->reason);
-		} else {
+        } else {
             fprintf(stderr, " at 0x%p", e);
-		}
+        }
         if (file && line > 0) {
             fprintf(stderr, " raised at %s:%d\n", file, line);
-		}
+        }
         fprintf(stderr, "aborting...\n");
         fflush(stderr);
         abort();
@@ -43,7 +42,5 @@ void Except_raise(const T *e, const char *file, int line)
 }
 
 #ifdef __cplusplus
-#if __cplusplus
 }
-#endif
 #endif

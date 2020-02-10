@@ -4,9 +4,7 @@
 #include "except.h"
 
 #ifdef __cplusplus
-#if __cplusplus
 extern "C" {
-#endif
 #endif
 
 extern const Except_T Mem_Failed;
@@ -26,9 +24,7 @@ extern void *Mem_resize(void *ptr, long nbytes, const char *file, int line);
 	(nbytes), __FILE__, __LINE__))
 
 #ifdef __cplusplus
-#if __cplusplus
 }
-#endif
 #endif
 
 #endif /* MEM_INCLUDED__ */

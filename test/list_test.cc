@@ -76,10 +76,10 @@ TEST_F(ListTests, should_return_a_list_that_same_with_original_one_when_copy_it)
     int expectationLength = List_length(originList);
     int acutalLength = List_length(newList);
     EXPECT_EQ(acutalLength, expectationLength);
-    char *originValue = NULL;
+    char* originValue = NULL;
     originList = List_pop(originList, (void**)&originValue);
     EXPECT_TRUE(originValue != NULL);
-    char *newValue = NULL;
+    char* newValue = NULL;
     newList = List_pop(newList, (void**)&newValue);
     EXPECT_TRUE(newValue != NULL);
     EXPECT_EQ(*newValue, *originValue);

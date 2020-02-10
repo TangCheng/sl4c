@@ -1,5 +1,9 @@
 #include "arith.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 int Arith_max(int x, int y)
 {
     return x > y ? x : y;
@@ -37,3 +41,7 @@ int Arith_ceiling(int x, int y)
 {
     return Arith_div(x, y) + (x % y != 0);
 }
+
+#ifdef __cplusplus
+}
+#endif

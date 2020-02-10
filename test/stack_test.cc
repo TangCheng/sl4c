@@ -4,8 +4,6 @@
 
 class StackTests : public testing::Test
 {
-public:
-
 };
 
 TEST_F(StackTests, should_return_empty_stack_when_initialized)

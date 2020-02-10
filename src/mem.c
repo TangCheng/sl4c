@@ -1,15 +1,13 @@
 #include "mem.h"
 
+#include <assert.h>
 #include <stddef.h>
 #include <stdlib.h>
 
-#include "assert.h"
 #include "except.h"
 
 #ifdef __cplusplus
-#if __cplusplus
 extern "C" {
-#endif
 #endif
 
 const Except_T Mem_Failed = {"Allocation Failed"};
@@ -70,7 +68,5 @@ void *Mem_resize(void *ptr, long nbytes,
 }
 
 #ifdef __cplusplus
-#if __cplusplus
 }
-#endif
 #endif
