@@ -2,6 +2,8 @@
 
 #include <gtest/gtest.h>
 
+#include "mem.h"
+
 class ListTests : public testing::Test
 {
 public:
@@ -99,14 +101,15 @@ TEST_F(ListTests, should_get_array_with_ending_flag)
 {
     list = List_push(list, &x);
     list = List_push(list, &y);
-    void** array = List_toArray(list, NULL);
+    char** array = (char**)List_toArray(list, NULL);
     EXPECT_TRUE(array != NULL);
     int listLength = List_length(list);
     int index;
     for (index = 0; index < listLength; index++) {
-        char* actual = (char*)array[index];
+        char* actual = array[index];
         list = List_pop(list, (void**)&value);
         EXPECT_EQ(*actual, *value);
     }
     EXPECT_TRUE(array[listLength] == NULL);
+    DELETE(array);
 }
